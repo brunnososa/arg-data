@@ -1,0 +1,1 @@
+{"name":"arg-data","private":true,"version":"0.1.0","type":"module","scripts":{"radar":"node services/radar/run.js","benchmark":"node services/verdict/benchmark.js"},"engines":{"node":">=20"}}
