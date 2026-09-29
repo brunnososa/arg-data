@@ -1,0 +1,23 @@
+{
+  "id":"ARG-000003",
+  "status":"QUEUED_FOR_RESEARCH",
+  "claim":"Durante este gobierno se crearon más de 500 mil puestos de trabajo.",
+  "source":{
+    "speaker":"Javier Milei",
+    "date":"2026-09-27",
+    "discovery_only":true
+  },
+  "topics":["employment"],
+  "research_questions":[
+    "¿Cuántos puestos de trabajo netos se crearon en el período comparable?",
+    "¿Cómo se distribuyen entre asalariados registrados, no registrados y no asalariados?",
+    "¿Qué cambia al ajustar por crecimiento de la población en edad de trabajar?"
+  ],
+  "required_primary_evidence":[
+    "INDEC Cuenta de generación del ingreso / puestos de trabajo",
+    "INDEC mercado de trabajo",
+    "INDEC population denominator where applicable"
+  ],
+  "verdict":"PENDING",
+  "human_approval_required":true
+}
