@@ -1,0 +1,23 @@
+{
+  "id":"ARG-000002",
+  "status":"QUEUED_FOR_RESEARCH",
+  "claim":"Argentina no está en recesión; hay una desaceleración del ritmo de expansión y los indicadores desestacionalizados miden mal por cambios estructurales.",
+  "source":{
+    "speaker":"Javier Milei",
+    "date":"2026-09-27",
+    "discovery_only":true
+  },
+  "topics":["activity"],
+  "research_questions":[
+    "¿Se cumplen actualmente los criterios convencionales de recesión técnica?",
+    "¿Qué muestran PBI trimestral, EMAE desestacionalizado y tendencia-ciclo?",
+    "¿Existe evidencia metodológica suficiente para sostener que los cambios estructurales invalidan el desestacionalizado actual?"
+  ],
+  "required_primary_evidence":[
+    "INDEC PBI trimestral 2026-Q1/Q2",
+    "INDEC EMAE latest observations and metadata",
+    "INDEC seasonal-adjustment methodology"
+  ],
+  "verdict":"PENDING",
+  "human_approval_required":true
+}
