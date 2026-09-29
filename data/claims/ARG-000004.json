@@ -1,0 +1,15 @@
+{
+  "id":"ARG-000004",
+  "status":"RESEARCHING",
+  "claim":"La probabilidad de default que el mercado le asigna a este gobierno es cero, literalmente.",
+  "speaker":"Javier Milei",
+  "claim_date":"2026-09-27",
+  "topics":["default","deuda","mercados"],
+  "research_questions":[
+    "¿Qué medida observable de mercado puede interpretarse como probabilidad implícita de default?",
+    "¿CDS, spreads soberanos o precios de bonos implican literalmente probabilidad cero?",
+    "¿Qué horizonte temporal estaba describiendo la afirmación?"
+  ],
+  "required_evidence":["market_pricing_methodology","sovereign_spread_or_cds_observation","horizon_definition"],
+  "publication":{"auto_publish":false,"human_approval_required":true}
+}
