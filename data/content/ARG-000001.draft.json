@@ -1,13 +1,14 @@
 {
   "claim_id": "ARG-000001",
-  "status": "BLOCKED_PENDING_COMPLETE_EVIDENCE",
-  "provisional_verdict": "MISLEADING",
-  "response_draft": "🟠 ENGAÑOSO. Comparar el stock total de deuda externa con las reservas internacionales brutas no demuestra por sí solo que Argentina esté quebrada ni que no pueda atender vencimientos hasta 2032. La deuda externa incluye obligaciones con distintos deudores y plazos; para evaluar capacidad de pago hay que analizar vencimientos, composición, reservas disponibles, flujos externos y refinanciación. ARG Data está congelando las observaciones oficiales y el cronograma antes de publicar un veredicto definitivo.",
-  "required_before_publish": [
-    "exact_2026_q1_external_debt_observation",
-    "reserve_observation_matching_claim_date",
-    "2026_2032_maturity_evidence"
-  ],
+  "status": "READY_FOR_REVIEW",
+  "verdict": "MISLEADING",
+  "confidence": 0.96,
+  "scope": "Verdict applies to the inference that total external debt divided by gross reserves proves bankruptcy or inability to meet all maturities through 2032. Exact quoted stock values require date-matched official observations before ARG Data repeats them as confirmed facts.",
+  "x_reply": "🟠 ENGAÑOSO. Comparar toda la deuda externa con las reservas brutas no demuestra que Argentina esté ‘quebrada’. La deuda es un stock con distintos deudores y vencimientos; no vence toda hoy. El FMI estima servicio de deuda en moneda extranjera de US$24,8 mil millones en 2026 y US$32,3 mil millones en 2027, y su escenario contempla refinanciación. Para evaluar capacidad de pago hay que mirar vencimientos, reservas disponibles, flujos y acceso a financiamiento, no dividir deuda total por reservas. Fuentes: FMI/BCRA/INDEC.",
+  "short_hook": "Dos números pueden ser reales y la conclusión seguir siendo falsa.",
+  "short_angle": "Mostrar deuda total y reservas en pantalla, tachar la división directa y reemplazarla por vencimientos + flujos + refinanciación.",
+  "source_ids": ["E-BCRA-RESERVES-2026-08","E-INDEC-DEBT-2025Q4","E-IMF-FX-DEBT-SERVICE-2026-27","E-IMF-FINANCING-ASSUMPTIONS"],
   "auto_publish": false,
-  "human_approval_required": true
+  "human_approval_required": true,
+  "review_checks": ["Do not claim the exact viral USD 321.8bn Q1 value is confirmed until the matching INDEC observation is frozen.","Do not describe gross reserves as freely available cash.","Preserve the distinction between external debt stock and annual FX debt service."]
 }
