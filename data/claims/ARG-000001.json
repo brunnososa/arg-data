@@ -1,0 +1,36 @@
+{
+  "claim_id": "ARG-000001",
+  "claim": "Argentina quebró: con una deuda externa de US$321,8 mil millones y reservas de US$48,9 mil millones, no tendrá dinero para pagar los vencimientos de deuda de 2026 a 2032.",
+  "language": "es-AR",
+  "topic": ["debt", "reserves", "solvency"],
+  "status": "READY_FOR_REVIEW",
+  "verdict": "MISLEADING",
+  "confidence": 0.94,
+  "summary": "La afirmación combina magnitudes que pueden aproximarse a datos reales, pero infiere insolvencia comparando el stock total de deuda externa con reservas brutas. Esa comparación por sí sola no determina capacidad de pago de vencimientos futuros.",
+  "subclaims": [
+    {
+      "id": "ARG-000001-A",
+      "text": "La deuda externa ronda US$321,8 mil millones.",
+      "type": "NUMERIC",
+      "requires": ["external_debt_stock", "reference_period"]
+    },
+    {
+      "id": "ARG-000001-B",
+      "text": "Las reservas internacionales rondan US$48,9 mil millones.",
+      "type": "NUMERIC",
+      "requires": ["gross_international_reserves", "reference_date"]
+    },
+    {
+      "id": "ARG-000001-C",
+      "text": "Como la deuda externa supera las reservas, Argentina no podrá pagar sus vencimientos hasta 2032.",
+      "type": "CAUSAL_CONCLUSION",
+      "requires": ["maturity_schedule", "public_external_debt", "gross_reserves", "net_reserves", "financing_assumptions", "fiscal_balance", "external_balance"]
+    }
+  ],
+  "risk_flags": ["POLITICAL_ECONOMIC", "SOLVENCY_INFERENCE", "STOCK_FLOW_CONFUSION"],
+  "editorial_gate": {
+    "human_review_required": true,
+    "approved_by": null,
+    "approved_at": null
+  }
+}
