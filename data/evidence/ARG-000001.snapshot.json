@@ -1,7 +1,7 @@
 {
   "claim_id": "ARG-000001",
-  "snapshot_status": "PARTIAL_OFFICIAL_EVIDENCE",
-  "captured_at": "2026-09-29T18:00:00Z",
+  "snapshot_status": "SUFFICIENT_FOR_CAUSAL_VERDICT_PENDING_EXACT_Q1_VALUE",
+  "captured_at": "2026-09-29T18:20:00Z",
   "evidence": [
     {
       "id": "E-BCRA-RESERVES-SERIES",
@@ -12,7 +12,17 @@
       "periodicity": "D",
       "unit": "millones de USD",
       "source_url": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias",
-      "methodology_note": "BCRA identifies idVariable 1 as Reservas internacionales; figures are gross international reserves and may be provisional / subject to valuation changes."
+      "methodology_note": "BCRA identifies idVariable 1 as Reservas internacionales; these are gross international reserves and can move with transactions and valuation changes."
+    },
+    {
+      "id": "E-BCRA-RESERVES-2026-08",
+      "institution": "BCRA",
+      "dataset": "Informe de Evolucion del Mercado de Cambios y Balance Cambiario",
+      "period": "2026-08-31",
+      "value": 48259,
+      "unit": "millones de USD",
+      "source_url": "https://www.bcra.gob.ar/publicaciones/informe-de-evolucion-del-mercado-de-cambios-y-balance-cambiario-agosto-de-2026/",
+      "methodology_note": "BCRA reports reserves increased USD 660m during August and ended the month at USD 48.259bn."
     },
     {
       "id": "E-INDEC-DEBT-2025Q4",
@@ -23,12 +33,38 @@
       "unit": "millones de USD",
       "source_url": "https://www.indec.gob.ar/uploads/informesdeprensa/bal_03_262210251315.pdf",
       "methodology_note": "Deuda externa bruta a valor nominal. INDEC states estimates from 2023 through 2025-Q4 are provisional and subject to revision."
+    },
+    {
+      "id": "E-IMF-FX-DEBT-SERVICE-2026-27",
+      "institution": "IMF",
+      "dataset": "Argentina 2026 Article IV / Second EFF Review, Table 9",
+      "period": "2026-2027",
+      "value": {"2026_total_fx_debt_service_usd_bn":24.8,"2027_total_fx_debt_service_usd_bn":32.3,"2026_principal_usd_bn":15.6,"2027_principal_usd_bn":23.3},
+      "unit": "USD billions",
+      "source_url": "https://www.elibrary.imf.org/view/journals/002/2026/105/article-A001-en.xml",
+      "methodology_note": "IMF Table 9 reports FX debt service rather than treating the entire external-debt stock as immediately payable."
+    },
+    {
+      "id": "E-IMF-FINANCING-ASSUMPTIONS",
+      "institution": "IMF",
+      "dataset": "Argentina 2026 Article IV / Second EFF Review",
+      "period": "2026-2031",
+      "unit": "USD billions / assumptions",
+      "source_url": "https://www.elibrary.imf.org/view/journals/002/2026/105/article-A001-en.xml",
+      "methodology_note": "IMF baseline explicitly assumes refinancing of FX principal through market issuance plus official financing; therefore reserve stock divided by total external debt is not the official debt-service test."
     }
   ],
+  "reasoning_checks": {
+    "stock_vs_flow": "PASS: total external debt stock is distinct from annual debt service.",
+    "gross_vs_net": "PASS_WITH_DISCLOSURE: viral comparison uses gross reserves; gross reserves are not equivalent to freely disposable net reserves.",
+    "refinancing": "PASS: IMF baseline contains explicit refinancing and financing assumptions.",
+    "causal_inference": "FAIL_FOR_VIRAL_CLAIM: the cited stock comparison alone cannot establish bankruptcy or inability to pay through 2032."
+  },
   "unresolved": [
-    "Freeze the exact 2026-Q1 external-debt observation from the INDEC release before final publication.",
-    "Freeze the exact reserve observation corresponding to the date used by the viral claim.",
-    "Add maturity schedule evidence before evaluating the 2026-2032 inability-to-pay conclusion."
+    "Freeze the exact official 2026-Q1 external-debt observation if the final publication repeats the viral USD 321.8bn figure.",
+    "Freeze the exact daily reserve observation if the final publication repeats the viral USD 48.9bn figure.",
+    "Extend annual maturity table through 2032 for the long-form article; not required to reject the stock-vs-reserves inference."
   ],
-  "publication_blocked": true
+  "publication_blocked": false,
+  "publication_scope": "The causal conclusion can be rated MISLEADING now. Exact numeric subclaims remain conditional until their matching official observations are frozen."
 }
