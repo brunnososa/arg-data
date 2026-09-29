@@ -1,0 +1,34 @@
+{
+  "claim_id": "ARG-000001",
+  "snapshot_status": "PARTIAL_OFFICIAL_EVIDENCE",
+  "captured_at": "2026-09-29T18:00:00Z",
+  "evidence": [
+    {
+      "id": "E-BCRA-RESERVES-SERIES",
+      "institution": "BCRA",
+      "dataset": "Estadisticas Monetarias v4.0",
+      "series_id": "1",
+      "description": "Reservas internacionales",
+      "periodicity": "D",
+      "unit": "millones de USD",
+      "source_url": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias",
+      "methodology_note": "BCRA identifies idVariable 1 as Reservas internacionales; figures are gross international reserves and may be provisional / subject to valuation changes."
+    },
+    {
+      "id": "E-INDEC-DEBT-2025Q4",
+      "institution": "INDEC",
+      "dataset": "Balanza de pagos, posicion de inversion internacional y deuda externa",
+      "period": "2025-Q4",
+      "value": 320305,
+      "unit": "millones de USD",
+      "source_url": "https://www.indec.gob.ar/uploads/informesdeprensa/bal_03_262210251315.pdf",
+      "methodology_note": "Deuda externa bruta a valor nominal. INDEC states estimates from 2023 through 2025-Q4 are provisional and subject to revision."
+    }
+  ],
+  "unresolved": [
+    "Freeze the exact 2026-Q1 external-debt observation from the INDEC release before final publication.",
+    "Freeze the exact reserve observation corresponding to the date used by the viral claim.",
+    "Add maturity schedule evidence before evaluating the 2026-2032 inability-to-pay conclusion."
+  ],
+  "publication_blocked": true
+}
