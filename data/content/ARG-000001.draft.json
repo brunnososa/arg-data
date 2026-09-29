@@ -1,0 +1,13 @@
+{
+  "claim_id": "ARG-000001",
+  "status": "BLOCKED_PENDING_COMPLETE_EVIDENCE",
+  "provisional_verdict": "MISLEADING",
+  "response_draft": "🟠 ENGAÑOSO. Comparar el stock total de deuda externa con las reservas internacionales brutas no demuestra por sí solo que Argentina esté quebrada ni que no pueda atender vencimientos hasta 2032. La deuda externa incluye obligaciones con distintos deudores y plazos; para evaluar capacidad de pago hay que analizar vencimientos, composición, reservas disponibles, flujos externos y refinanciación. ARG Data está congelando las observaciones oficiales y el cronograma antes de publicar un veredicto definitivo.",
+  "required_before_publish": [
+    "exact_2026_q1_external_debt_observation",
+    "reserve_observation_matching_claim_date",
+    "2026_2032_maturity_evidence"
+  ],
+  "auto_publish": false,
+  "human_approval_required": true
+}
